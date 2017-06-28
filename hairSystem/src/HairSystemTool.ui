@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HairSystemTool</class>
+ <widget class="QMainWindow" name="HairSystemTool">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>420</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>420</width>
+    <height>1000</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QFrame" name="frame">
+      <property name="focusPolicy">
+       <enum>Qt::WheelFocus</enum>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="3" column="2">
+        <widget class="QLineEdit" name="intEdit">
+         <property name="mouseTracking">
+          <bool>true</bool>
+         </property>
+         <property name="acceptDrops">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>1</string>
+         </property>
+         <property name="maxLength">
+          <number>32755</number>
+         </property>
+         <property name="frame">
+          <bool>true</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="dragEnabled">
+          <bool>false</bool>
+         </property>
+         <property name="placeholderText">
+          <string notr="true"/>
+         </property>
+         <property name="cursorMoveStyle">
+          <enum>Qt::LogicalMoveStyle</enum>
+         </property>
+         <property name="+cc" stdset="0">
+          <string>&quot;reload(ChangedCommand);ChangedCommand.fromLineEdit2Slider(\&quot;intEdit\&quot;, \&quot;intSlider\&quot;)&quot;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0" colspan="2">
+        <widget class="QLabel" name="text">
+         <property name="minimumSize">
+          <size>
+           <width>130</width>
+           <height>16</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>130</width>
+           <height>16</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Number of Influence</string>
+         </property>
+         <property name="textInteractionFlags">
+          <set>Qt::LinksAccessibleByMouse</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0" colspan="3">
+        <widget class="QRadioButton" name="createRadioButton">
+         <property name="toolTipDuration">
+          <number>1</number>
+         </property>
+         <property name="text">
+          <string>Create New Hair System</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+         <property name="+onc" stdset="0">
+          <string>&quot;reload(ChangedCommand);ChangedCommand.changeRadio2CreateMode(\&quot;scrollList\&quot;)&quot;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="3" colspan="2">
+        <widget class="QSlider" name="intSlider">
+         <property name="minimumSize">
+          <size>
+           <width>123</width>
+           <height>22</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>135</width>
+           <height>22</height>
+          </size>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>99</number>
+         </property>
+         <property name="pageStep">
+          <number>10</number>
+         </property>
+         <property name="sliderPosition">
+          <number>1</number>
+         </property>
+         <property name="tracking">
+          <bool>true</bool>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="tickPosition">
+          <enum>QSlider::NoTicks</enum>
+         </property>
+         <property name="tickInterval">
+          <number>0</number>
+         </property>
+         <property name="+dc" stdset="0">
+          <string>&quot;reload(ChangedCommand);ChangedCommand.fromSlider2LineEdit(\&quot;intEdit\&quot;, \&quot;intSlider\&quot;)&quot;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="2">
+        <widget class="QPushButton" name="pushButton">
+         <property name="minimumSize">
+          <size>
+           <width>108</width>
+           <height>33</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>108</width>
+           <height>33</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Refresh</string>
+         </property>
+         <property name="+c" stdset="0">
+          <string>&quot;reload(ChangedCommand);ChangedCommand.doRefreshCmd(\&quot;scrollList\&quot;)&quot;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="3">
+        <widget class="QRadioButton" name="attachRadioButton">
+         <property name="text">
+          <string>Attach Hair System</string>
+         </property>
+         <property name="+onc" stdset="0">
+          <string>&quot;reload(ChangedCommand);ChangedCommand.changeRadio2AttachMode(\&quot;scrollList\&quot;)&quot;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QPushButton" name="applyButton">
+         <property name="minimumSize">
+          <size>
+           <width>108</width>
+           <height>33</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>108</width>
+           <height>33</height>
+          </size>
+         </property>
+         <property name="inputMethodHints">
+          <set>Qt::ImhNone</set>
+         </property>
+         <property name="text">
+          <string>Apply</string>
+         </property>
+         <property name="+c" stdset="0">
+          <string>&quot;reload(ChangedCommand);ChangedCommand.doApplyCmd(\&quot;scrollList\&quot;, \&quot;intSlider\&quot;)&quot;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="4">
+        <widget class="QPushButton" name="closeButton">
+         <property name="minimumSize">
+          <size>
+           <width>108</width>
+           <height>33</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>108</width>
+           <height>33</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Close</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0" colspan="5">
+        <widget class="QListWidget" name="scrollList">
+         <property name="currentRow">
+          <number>-1</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+      <zorder>createRadioButton</zorder>
+      <zorder>attachRadioButton</zorder>
+      <zorder>text</zorder>
+      <zorder>intSlider</zorder>
+      <zorder>intEdit</zorder>
+      <zorder>pushButton</zorder>
+      <zorder>scrollList</zorder>
+      <zorder>applyButton</zorder>
+      <zorder>closeButton</zorder>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <action name="actionNothing">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>nothing</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>closeButton</sender>
+   <signal>clicked()</signal>
+   <receiver>HairSystemTool</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>304</x>
+     <y>470</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>209</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
